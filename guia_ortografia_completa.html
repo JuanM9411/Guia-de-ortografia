@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía de Ortografía · Acentuación, Diptongos, Hiatos y Puntuación</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&family=Fredoka+One&family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --azul:       #1565C0;
+  --azul-suave: #E3F2FD;
+  --azul-mid:   #42A5F5;
+  --verde:      #2E7D32;
+  --verde-suave:#E8F5E9;
+  --verde-mid:  #66BB6A;
+  --naranja:    #E65100;
+  --naranja-suave:#FFF3E0;
+  --naranja-mid:#FFA726;
+  --morado:     #6A1B9A;
+  --morado-suave:#F3E5F5;
+  --morado-mid: #AB47BC;
+  --rojo:       #C62828;
+  --rojo-suave: #FFEBEE;
+  --amarillo:   #F9A825;
+  --gris-claro: #F8F9FA;
+  --gris-borde: #DEE2E6;
+  --texto:      #212529;
+  --texto-suave:#6C757D;
+  --blanco:     #FFFFFF;
+  --sombra: 0 4px 16px rgba(0,0,0,0.10);
+  --sombra-hover: 0 8px 28px rgba(0,0,0,0.16);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: #F0F4F8;
+  color: var(--texto);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* NAV ÍNDICE */
+.nav-flotante {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--texto);
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.25);
+}
+.nav-flotante::-webkit-scrollbar { display:none; }
+.nav-item {
+  padding: 0.75rem 1.3rem;
+  color: #ccc;
+  font-size: 0.82rem;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+  letter-spacing: 0.03em;
+  border-bottom: 3px solid transparent;
+}
+.nav-item:hover { color: #fff; border-bottom-color: var(--amarillo); }
+.nav-item.a1 { border-bottom-color: transparent; }
+.nav-item:hover.a1 { border-bottom-color: var(--azul-mid); }
+.nav-item:hover.a2 { border-bottom-color: var(--verde-mid); }
+.nav-item:hover.a3 { border-bottom-color: var(--naranja-mid); }
+.nav-item:hover.a4 { border-bottom-color: var(--morado-mid); }
+
+/* PORTADA */
+.portada {
+  background: linear-gradient(135deg, #1565C0 0%, #0D47A1 50%, #1A237E 100%);
+  color: white;
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.portada::before {
+  content:'';
+  position:absolute;
+  width:600px; height:600px;
+  background: rgba(255,255,255,0.04);
+  border-radius:50%;
+  top:-200px; right:-150px;
+}
+.portada::after {
+  content:'';
+  position:absolute;
+  width:400px; height:400px;
+  background: rgba(255,255,255,0.04);
+  border-radius:50%;
+  bottom:-150px; left:-100px;
+}
+.portada-emoji { font-size: 4.5rem; display:block; margin-bottom:1rem; animation: bounce 2s ease-in-out infinite; }
+@keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+.portada h1 {
+  font-family: 'Fredoka One', sans-serif;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  margin-bottom: 0.5rem;
+  text-shadow: 0 3px 12px rgba(0,0,0,0.3);
+}
+.portada p {
+  font-size: 1.15rem;
+  opacity: 0.85;
+  max-width: 620px;
+  margin: 0 auto 2rem;
+}
+.chips-portada { display:flex; flex-wrap:wrap; gap:0.7rem; justify-content:center; }
+.chip {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 0.4rem 1.1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* CONTENEDOR */
+.contenedor { max-width: 1000px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+
+/* SECCIÓN */
+.seccion { margin-bottom: 4rem; }
+.seccion-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid var(--gris-borde);
+}
+.seccion-num {
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 2.2rem;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink: 0;
+  color: white;
+}
+.seccion-header h2 {
+  font-family: 'Fredoka One', sans-serif;
+  font-size: clamp(1.5rem,3vw,2rem);
+}
+
+/* COLORES POR SECCIÓN */
+.sec-azul .seccion-num { background: var(--azul); }
+.sec-azul .seccion-header { border-color: var(--azul-mid); }
+.sec-azul .seccion-header h2 { color: var(--azul); }
+
+.sec-verde .seccion-num { background: var(--verde); }
+.sec-verde .seccion-header { border-color: var(--verde-mid); }
+.sec-verde .seccion-header h2 { color: var(--verde); }
+
+.sec-naranja .seccion-num { background: var(--naranja); }
+.sec-naranja .seccion-header { border-color: var(--naranja-mid); }
+.sec-naranja .seccion-header h2 { color: var(--naranja); }
+
+.sec-morado .seccion-num { background: var(--morado); }
+.sec-morado .seccion-header { border-color: var(--morado-mid); }
+.sec-morado .seccion-header h2 { color: var(--morado); }
+
+/* TARJETA BASE */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.8rem 2rem;
+  box-shadow: var(--sombra);
+  margin-bottom: 1.5rem;
+  border-left: 5px solid var(--gris-borde);
+}
+.card.azul  { border-left-color: var(--azul); }
+.card.verde { border-left-color: var(--verde); }
+.card.naranja { border-left-color: var(--naranja); }
+.card.morado { border-left-color: var(--morado); }
+.card.amarillo { border-left-color: var(--amarillo); }
+.card.rojo { border-left-color: var(--rojo); }
+
+.card h3 {
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 1.25rem;
+  margin-bottom: 0.8rem;
+}
+.card.azul h3    { color: var(--azul); }
+.card.verde h3   { color: var(--verde); }
+.card.naranja h3 { color: var(--naranja); }
+.card.morado h3  { color: var(--morado); }
+.card.rojo h3    { color: var(--rojo); }
+
+/* DEFINICIÓN DESTACADA */
+.definicion {
+  background: linear-gradient(135deg, #E3F2FD, #BBDEFB);
+  border: 2px solid var(--azul-mid);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+.definicion.verde { background: linear-gradient(135deg,#E8F5E9,#C8E6C9); border-color: var(--verde-mid); }
+.definicion.naranja { background: linear-gradient(135deg,#FFF3E0,#FFE0B2); border-color: var(--naranja-mid); }
+.definicion.morado { background: linear-gradient(135deg,#F3E5F5,#E1BEE7); border-color: var(--morado-mid); }
+
+.def-label {
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+  opacity: 0.7;
+}
+
+/* REGLA BOX */
+.regla-box {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.2rem;
+  box-shadow: var(--sombra);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+.regla-num {
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Fredoka One',sans-serif;
+  font-size: 1.1rem;
+  color: white;
+  flex-shrink:0;
+}
+.bg-azul   { background: var(--azul); }
+.bg-verde  { background: var(--verde); }
+.bg-naranja{ background: var(--naranja); }
+.bg-morado { background: var(--morado); }
+
+.regla-content h4 {
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+}
+.regla-content p { font-size: 0.97rem; line-height: 1.75; color: #444; }
+
+/* EJEMPLOS */
+.ejemplos-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+}
+.ej {
+  padding: 0.28rem 0.85rem;
+  border-radius: 6px;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+.ej-si  { background: #E8F5E9; color: var(--verde); border: 1px solid #A5D6A7; }
+.ej-no  { background: #FFEBEE; color: var(--rojo); border: 1px solid #EF9A9A; text-decoration: line-through; }
+.ej-neu { background: #E3F2FD; color: var(--azul); border: 1px solid #90CAF9; }
+.ej-ora { background: #FFF3E0; color: var(--naranja); border: 1px solid #FFCC80; }
+.ej-mor { background: #F3E5F5; color: var(--morado); border: 1px solid #CE93D8; }
+
+/* TABLA VOCALES */
+.tabla-vocales {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+.tabla-vocales th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+}
+.tabla-vocales td {
+  padding: 0.7rem 1rem;
+  border-top: 1px solid var(--gris-borde);
+  font-size: 0.95rem;
+}
+.tabla-vocales tr:nth-child(even) td { background: #F8F9FA; }
+.th-fuerte { background: #C62828; color:white; }
+.th-debil  { background: #1565C0; color:white; }
+.th-combo  { background: #37474F; color:white; }
+
+/* ALERTA / TIP */
+.tip {
+  display: flex;
+  gap: 0.9rem;
+  padding: 1.1rem 1.4rem;
+  border-radius: 10px;
+  margin: 1.2rem 0;
+  align-items: flex-start;
+}
+.tip.amarillo { background: #FFFDE7; border: 1px solid #F9A825; }
+.tip.azul     { background: var(--azul-suave); border: 1px solid var(--azul-mid); }
+.tip.verde    { background: var(--verde-suave); border: 1px solid var(--verde-mid); }
+.tip.rojo     { background: var(--rojo-suave); border: 1px solid #EF9A9A; }
+.tip-icon { font-size: 1.4rem; flex-shrink:0; margin-top:0.1rem; }
+.tip-text { font-size: 0.97rem; line-height: 1.75; }
+.tip-text strong { font-weight: 800; }
+
+/* GRID DOS COLUMNAS */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin: 1.2rem 0;
+}
+@media(max-width:640px){ .grid-2{ grid-template-columns:1fr; } }
+
+/* PALABRA SILÁBICA */
+.palabra-silab {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: inline-block;
+  margin: 0.5rem 0;
+}
+.sil { padding: 0 2px; }
+.sil-tonica { color: var(--rojo); font-size: 1.6rem; text-decoration: underline; text-underline-offset: 3px; }
+.sil-ox { border-bottom: 3px solid var(--azul); }
+
+/* ESQUEMA CLASIFICACIÓN */
+.clasificacion-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1.2rem 0;
+}
+@media(max-width:500px){ .clasificacion-grid{ grid-template-columns:1fr; } }
+
+.clas-card {
+  border-radius: 10px;
+  padding: 1.3rem 1.5rem;
+  text-align: center;
+}
+.clas-card h4 { font-family:'Fredoka One',sans-serif; font-size:1.15rem; margin-bottom:0.3rem; }
+.clas-card .posicion { font-size:0.82rem; font-weight:700; opacity:0.7; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:0.6rem; }
+.clas-card .ejs-pal { font-family:'Source Code Pro',monospace; font-size:0.9rem; }
+
+.clas-aguda    { background:#E3F2FD; border:2px solid var(--azul-mid); color:var(--azul); }
+.clas-grave    { background:#E8F5E9; border:2px solid var(--verde-mid); color:var(--verde); }
+.clas-esdru    { background:#FFF3E0; border:2px solid var(--naranja-mid); color:var(--naranja); }
+.clas-super    { background:#F3E5F5; border:2px solid var(--morado-mid); color:var(--morado); }
+
+/* VOCALES VISUALES */
+.vocal-btn {
+  display:inline-flex; align-items:center; justify-content:center;
+  width:44px; height:44px; border-radius:50%;
+  font-family:'Fredoka One',sans-serif; font-size:1.5rem;
+  margin:0.2rem; font-weight:900;
+}
+.vocal-fuerte { background:#C62828; color:white; }
+.vocal-debil  { background:#1565C0; color:white; }
+
+/* PUNTUACION ITEM */
+.punt-item {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.2rem;
+  box-shadow: var(--sombra);
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 1.2rem;
+  align-items: start;
+}
+.punt-signo {
+  text-align:center;
+  font-family:'Source Code Pro',monospace;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1;
+  padding-top:0.2rem;
+}
+.punt-contenido h4 { font-family:'Fredoka One',sans-serif; font-size:1.15rem; margin-bottom:0.5rem; }
+.punt-contenido p { font-size:0.97rem; line-height:1.75; color:#444; margin-bottom:0.6rem; }
+.usos-lista { list-style:none; display:flex; flex-direction:column; gap:0.4rem; }
+.usos-lista li { font-size:0.93rem; padding-left:1.2rem; position:relative; color:#555; }
+.usos-lista li::before { content:'→'; position:absolute; left:0; color:var(--azul); font-weight:700; }
+
+/* EJEMPLO PÁRRAFO */
+.parrafo-ejemplo {
+  background: #FAFAFA;
+  border: 2px dashed var(--gris-borde);
+  border-radius: 10px;
+  padding: 1.2rem 1.5rem;
+  font-size: 1rem;
+  line-height: 2;
+  margin: 0.8rem 0;
+  font-family: 'Nunito', sans-serif;
+}
+.marca-coma    { color: var(--azul); font-weight:800; font-size:1.1rem; }
+.marca-punto   { color: var(--verde); font-weight:800; font-size:1.1rem; }
+.marca-puntos  { color: var(--naranja); font-weight:800; font-size:1.1rem; }
+.marca-interro { color: var(--morado); font-weight:800; font-size:1.1rem; }
+.marca-excla   { color: var(--rojo); font-weight:800; font-size:1.1rem; }
+.marca-dospu   { color: #00695C; font-weight:800; font-size:1.1rem; }
+
+/* COMPARAR BIEN/MAL */
+.compara {
+  display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:1rem 0;
+}
+@media(max-width:540px){ .compara{grid-template-columns:1fr;} }
+.compara-bien, .compara-mal {
+  border-radius:8px; padding:1rem 1.2rem;
+  font-size:0.95rem; line-height:1.7;
+}
+.compara-bien { background:#E8F5E9; border:2px solid var(--verde-mid); }
+.compara-mal  { background:#FFEBEE; border:2px solid #EF9A9A; }
+.compara-label {
+  font-family:'Fredoka One',sans-serif;
+  font-size:0.85rem; letter-spacing:0.05em;
+  margin-bottom:0.4rem;
+  display:block;
+}
+.compara-bien .compara-label { color:var(--verde); }
+.compara-mal  .compara-label { color:var(--rojo); }
+
+/* RESUMEN FINAL */
+.resumen-grid {
+  display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap:1.2rem; margin-top:2rem;
+}
+.resumen-card {
+  border-radius:12px; padding:1.5rem;
+  text-align:center; box-shadow:var(--sombra);
+}
+.resumen-card .emoji { font-size:2.2rem; display:block; margin-bottom:0.5rem; }
+.resumen-card h4 { font-family:'Fredoka One',sans-serif; font-size:1.1rem; margin-bottom:0.4rem; }
+.resumen-card p { font-size:0.88rem; line-height:1.65; color:#555; }
+
+.rc-azul    { background: var(--azul-suave); border:2px solid var(--azul-mid); }
+.rc-verde   { background: var(--verde-suave); border:2px solid var(--verde-mid); }
+.rc-naranja { background: var(--naranja-suave); border:2px solid var(--naranja-mid); }
+.rc-morado  { background: var(--morado-suave); border:2px solid var(--morado-mid); }
+
+/* FOOTER */
+footer {
+  text-align:center; padding:3rem 2rem;
+  background: var(--texto); color:#aaa;
+  font-size:0.88rem;
+}
+footer strong { color: var(--amarillo); }
+
+/* ANIMACIONES ENTRADA */
+.seccion { animation: fadeUp 0.5s ease both; }
+@keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+</style>
+</head>
+<body>
+
+<!-- PORTADA -->
+<section class="portada">
+  <span class="portada-emoji">✏️</span>
+  <h1>Guía de Ortografía</h1>
+  <p>Acentuación · Diptongos · Hiatos · Puntuación<br>
+  Explicación paso a paso con muchos ejemplos para que lo entiendas de verdad.</p>
+  <div class="chips-portada">
+    <span class="chip">📘 Acentuación</span>
+    <span class="chip">🔗 Diptongos</span>
+    <span class="chip">✂️ Hiatos</span>
+    <span class="chip">🔤 Puntuación</span>
+  </div>
+</section>
+
+<!-- NAV -->
+<nav class="nav-flotante">
+  <a href="#acento" class="nav-item a1">📘 Acentuación</a>
+  <a href="#diptongo" class="nav-item a2">🔗 Diptongos</a>
+  <a href="#hiato" class="nav-item a3">✂️ Hiatos</a>
+  <a href="#puntuacion" class="nav-item a4">🔤 Puntuación</a>
+</nav>
+
+<div class="contenedor">
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- SECCIÓN 1: ACENTUACIÓN -->
+<!-- ════════════════════════════════════════════════ -->
+<section class="seccion sec-azul" id="acento">
+  <div class="seccion-header">
+    <div class="seccion-num">1</div>
+    <div>
+      <h2>Acentuación y Tilde</h2>
+      <p style="color:var(--texto-suave);font-size:0.95rem">La tilde no es decoración: indica cuál sílaba se pronuncia más fuerte.</p>
+    </div>
+  </div>
+
+  <!-- Concepto básico -->
+  <div class="definicion">
+    <p class="def-label">📖 ¿Qué es el acento?</p>
+    <p>El <strong>acento</strong> es la mayor fuerza de voz con la que pronunciamos una sílaba dentro de una palabra. Esa sílaba se llama <strong>sílaba tónica</strong>. Todas las palabras tienen acento, pero no todas llevan <strong>tilde</strong> (el palito escrito: ´).</p>
+  </div>
+
+  <div class="tip amarillo">
+    <span class="tip-icon">💡</span>
+    <p class="tip-text"><strong>Truco clave:</strong> Para saber qué sílaba es tónica, di la palabra exagerando: "CA-sa… CA-sa… CA-sa". La que suena más fuerte o "golpea" más es la tónica.</p>
+  </div>
+
+  <!-- CLASIFICACIÓN -->
+  <div class="card azul">
+    <h3>Clasificación de las palabras según su acento</h3>
+    <div class="clasificacion-grid">
+      <div class="clas-card clas-aguda">
+        <h4>Agudas (oxítonas)</h4>
+        <p class="posicion">Sílaba tónica: ÚLTIMA</p>
+        <p class="ejs-pal">ca·fé — ca·mión — can·tar — na·riz — rín·mel</p>
+        <p style="font-size:0.83rem;margin-top:0.5rem">Llevan tilde si terminan en <strong>N, S o vocal</strong></p>
+      </div>
+      <div class="clas-card clas-grave">
+        <h4>Graves o llanas (paroxítonas)</h4>
+        <p class="posicion">Sílaba tónica: PENÚLTIMA</p>
+        <p class="ejs-pal">ca·sa — ár·bol — lá·piz — fá·cil — nú·cleo</p>
+        <p style="font-size:0.83rem;margin-top:0.5rem">Llevan tilde si <strong>NO</strong> terminan en N, S o vocal</p>
+      </div>
+      <div class="clas-card clas-esdru">
+        <h4>Esdrújulas (proparoxítonas)</h4>
+        <p class="posicion">Sílaba tónica: ANTEPENÚLTIMA</p>
+        <p class="ejs-pal">mú·si·ca — es·drú·ju·la — pá·ja·ro — mé·di·co</p>
+        <p style="font-size:0.83rem;margin-top:0.5rem"><strong>Siempre</strong> llevan tilde. Sin excepción.</p>
+      </div>
+      <div class="clas-card clas-super">
+        <h4>Sobreesdrújulas</h4>
+        <p class="posicion">Sílaba tónica: ANTES DE ANTEPENÚLTIMA</p>
+        <p class="ejs-pal">dí·ga·me·lo — co·mán·do·nos·la — há·zme·lo</p>
+        <p style="font-size:0.83rem;margin-top:0.5rem"><strong>Siempre</strong> llevan tilde. Siempre.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- REGLAS -->
+  <div class="card azul">
+    <h3>Reglas de acentuación paso a paso</h3>
+
+    <div class="regla-box">
+      <div class="regla-num bg-azul">R1</div>
+      <div class="regla-content">
+        <h4>Regla de las Agudas</h4>
+        <p>Las palabras agudas llevan tilde cuando terminan en <strong>vocal (a, e, i, o, u)</strong>, en <strong>N</strong> o en <strong>S</strong>.</p>
+        <div class="ejemplos-row">
+          <span class="ej ej-si">café ✓</span>
+          <span class="ej ej-si">camión ✓</span>
+          <span class="ej ej-si">también ✓</span>
+          <span class="ej ej-si">compás ✓</span>
+          <span class="ej ej-no">árbol ✗</span>
+          <span class="ej ej-no">reloj ✗</span>
+          <span class="ej ej-si">canté ✓</span>
+        </div>
+        <div class="tip azul" style="margin-top:0.8rem;padding:0.8rem 1rem">
+          <span class="tip-icon">🎯</span>
+          <p class="tip-text">Regla contraria: si termina en cualquier otra consonante (D, L, R, Z…) → <strong>NO lleva tilde</strong>. Ej: reloj, ciudad, amor, capaz.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="regla-box">
+      <div class="regla-num bg-azul">R2</div>
+      <div class="regla-content">
+        <h4>Regla de las Graves o Llanas</h4>
+        <p>Las palabras graves llevan tilde cuando <strong>NO terminan</strong> en vocal, N ni S. O sea: cuando terminan en cualquier otra consonante.</p>
+        <div class="ejemplos-row">
+          <span class="ej ej-si">árbol ✓</span>
+          <span class="ej ej-si">fácil ✓</span>
+          <span class="ej ej-si">lápiz ✓</span>
+          <span class="ej ej-si">cóndor ✓</span>
+          <span class="ej ej-no">casa ✗</span>
+          <span class="ej ej-no">joven ✗</span>
+          <span class="ej ej-no">crisis ✗</span>
+        </div>
+        <div class="tip amarillo" style="margin-top:0.8rem;padding:0.8rem 1rem">
+          <span class="tip-icon">⚠️</span>
+          <p class="tip-text"><em>casa, joven, crisis</em> son graves y <strong>no llevan tilde</strong> porque terminan en vocal, N y S respectivamente.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="regla-box">
+      <div class="regla-num bg-azul">R3</div>
+      <div class="regla-content">
+        <h4>Regla de las Esdrújulas y Sobreesdrújulas</h4>
+        <p><strong>Siempre llevan tilde.</strong> Sin importar cómo terminen. No hay excepciones.</p>
+        <div class="ejemplos-row">
+          <span class="ej ej-si">música ✓</span>
+          <span class="ej ej-si">pájaro ✓</span>
+          <span class="ej ej-si">médico ✓</span>
+          <span class="ej ej-si">dígamelo ✓</span>
+          <span class="ej ej-si">cómete ✓</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="regla-box">
+      <div class="regla-num bg-azul">R4</div>
+      <div class="regla-content">
+        <h4>Tilde diacrítica: palabras que cambian de significado</h4>
+        <p>Algunas palabras llevan tilde únicamente para distinguirse de otra palabra igual escrita pero diferente en significado.</p>
+        <table class="tabla-vocales" style="margin-top:0.7rem">
+          <thead>
+            <tr>
+              <th class="th-fuerte">Con tilde</th>
+              <th class="th-debil">Sin tilde</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>él</strong> (pronombre: <em>Él viene</em>)</td><td><strong>el</strong> (artículo: <em>el niño</em>)</td></tr>
+            <tr><td><strong>tú</strong> (pronombre: <em>Tú sabes</em>)</td><td><strong>tu</strong> (posesivo: <em>tu libro</em>)</td></tr>
+            <tr><td><strong>sí</strong> (afirmación / pronombre)</td><td><strong>si</strong> (condicional: <em>si llueve</em>)</td></tr>
+            <tr><td><strong>mí</strong> (pronombre: <em>para mí</em>)</td><td><strong>mi</strong> (posesivo: <em>mi casa</em>)</td></tr>
+            <tr><td><strong>sé</strong> (verbo saber / ser)</td><td><strong>se</strong> (pronombre: <em>se fue</em>)</td></tr>
+            <tr><td><strong>té</strong> (la bebida)</td><td><strong>te</strong> (pronombre: <em>te llamo</em>)</td></tr>
+            <tr><td><strong>más</strong> (cantidad: <em>más dinero</em>)</td><td><strong>mas</strong> (pero: <em>quiso mas no pudo</em>)</td></tr>
+            <tr><td><strong>aún</strong> (todavía: <em>aún no llega</em>)</td><td><strong>aun</strong> (incluso: <em>aun así</em>)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="tip verde">
+    <span class="tip-icon">✅</span>
+    <p class="tip-text"><strong>Resumen rápido:</strong> Aguda + termina en N/S/vocal → tilde. Grave + NO termina en N/S/vocal → tilde. Esdrújula y sobreesdrújula → siempre tilde.</p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- SECCIÓN 2: DIPTONGOS -->
+<!-- ════════════════════════════════════════════════ -->
+<section class="seccion sec-verde" id="diptongo">
+  <div class="seccion-header">
+    <div class="seccion-num">2</div>
+    <div>
+      <h2>El Diptongo</h2>
+      <p style="color:var(--texto-suave);font-size:0.95rem">Dos vocales que se pronuncian en una sola sílaba formando un "golpe de voz".</p>
+    </div>
+  </div>
+
+  <div class="definicion verde">
+    <p class="def-label">📖 Definición</p>
+    <p>El <strong>diptongo</strong> es la unión de dos vocales que se pronuncian juntas en una <strong>misma sílaba</strong>. Para que haya diptongo, la combinación debe incluir una vocal débil (<strong>i, u</strong>) sin tilde, acompañada de cualquier otra vocal.</p>
+  </div>
+
+  <!-- VOCALES -->
+  <div class="card verde">
+    <h3>Primero: las vocales fuertes y débiles</h3>
+    <p style="margin-bottom:1rem">Esta distinción es la base para entender diptongos e hiatos.</p>
+    <table class="tabla-vocales">
+      <thead>
+        <tr>
+          <th class="th-fuerte">Vocales FUERTES (abiertas)</th>
+          <th class="th-debil">Vocales DÉBILES (cerradas)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <span class="vocal-btn vocal-fuerte">a</span>
+            <span class="vocal-btn vocal-fuerte">e</span>
+            <span class="vocal-btn vocal-fuerte">o</span>
+          </td>
+          <td>
+            <span class="vocal-btn vocal-debil">i</span>
+            <span class="vocal-btn vocal-debil">u</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Se pueden pronunciar solas con la boca abierta</td>
+          <td>Necesitan apoyarse en otra vocal para sonar bien</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="tip amarillo" style="margin-top:1rem">
+      <span class="tip-icon">🧠</span>
+      <p class="tip-text"><strong>Truco para recordar:</strong> las débiles son la <em>i</em> y la <em>u</em> porque su boca apenas se abre. Las fuertes son <em>a, e, o</em> porque la boca se abre más.</p>
+    </div>
+  </div>
+
+  <!-- TIPOS DE DIPTONGO -->
+  <div class="card verde">
+    <h3>¿Cuándo se forma diptongo?</h3>
+
+    <div class="regla-box">
+      <div class="regla-num bg-verde">D1</div>
+      <div class="regla-content">
+        <h4>Vocal fuerte + vocal débil (sin tilde)</h4>
+        <p>Una vocal fuerte (a, e, o) + una vocal débil (i, u) SIN tilde = diptongo. Se pronuncian en UNA sola sílaba.</p>
+        <div class="ejemplos-row">
+          <span class="ej ej-si">ai·re (ai = dip.)</span>
+          <span class="ej ej-si">bai·le</span>
+          <span class="ej ej-si">pau·sa</span>
+          <span class="ej ej-si">cau·sa</span>
+          <span class="ej ej-si">rei·na</span>
+          <span class="ej ej-si">neu·tro</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="regla-box">
+      <div class="regla-num bg-verde">D2</div>
+      <div class="regla-content">
+        <h4>Vocal débil + vocal fuerte (sin tilde)</h4>
+        <p>También hay diptongo si la débil va primero. Orden inverso al anterior.</p>
+        <div class="ejemplos-row">
+          <span class="ej ej-si">pia·no (ia = dip.)</span>
+          <span class="ej ej-si">gua·po</span>
+          <span class="ej ej-si">tie·rra</span>
+          <span class="ej ej-si">vie·jo</span>
+          <span class="ej ej-si">fue·go</span>
+          <span class="ej ej-si">ciu·dad</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="regla-box">
+      <div class="regla-num bg-verde">D3</div>
+      <div class="regla-content">
+        <h4>Débil + débil (sin tilde)</h4>
+        <p>Dos vocales débiles juntas (i+u o u+i) también forman diptongo.</p>
+        <div class="ejemplos-row">
+          <span class="ej ej-si">ciu·dad (iu)</span>
+          <span class="ej ej-si">rui·do (ui)</span>
+          <span class="ej ej-si">viu·da</span>
+          <span class="ej ej-si">cui·dar</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACENTO EN DIPTONGOS -->
+  <div class="card verde">
+    <h3>¿Cómo se pone la tilde en un diptongo?</h3>
+    <p style="margin-bottom:1rem">Si la palabra con diptongo necesita tilde según las reglas generales, la tilde va sobre la vocal fuerte. Si el diptongo es de dos débiles, va sobre la segunda.</p>
+    <div class="ejemplos-row">
+      <span class="ej ej-si">tam·bién (éi → tilde en é)</span>
+      <span class="ej ej-si">tam·bién</span>
+      <span class="ej ej-si">gui·ta·rra</span>
+      <span class="ej ej-si">béis·bol</span>
+      <span class="ej ej-si">cuí·da·te (úi → tilde en ú)</span>
+    </div>
+    <div class="tip azul" style="margin-top:1rem">
+      <span class="tip-icon">📌</span>
+      <p class="tip-text"><strong>Regla:</strong> En un diptongo con vocal fuerte y débil, la tilde siempre va sobre la <strong>vocal fuerte</strong>. Ejemplo: <em>mié</em>rcoles (ie → tilde en e), <em>huésped</em>.</p>
+    </div>
+  </div>
+
+  <div class="tip verde">
+    <span class="tip-icon">🎵</span>
+    <p class="tip-text"><strong>Recuerda el diptongo cantando:</strong> Si puedes pronunciar las dos vocales en un solo "golpe de voz sin separar", es diptongo. <em>Cau</em>-sa (una sílaba "cau") → diptongo ✓ / <em>ca</em>-<em>í</em>-da (tres sílabas) → hiato ✓</p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- SECCIÓN 3: HIATOS -->
+<!-- ════════════════════════════════════════════════ -->
+<section class="seccion sec-naranja" id="hiato">
+  <div class="seccion-header">
+    <div class="seccion-num">3</div>
+    <div>
+      <h2>El Hiato</h2>
+      <p style="color:var(--texto-suave);font-size:0.95rem">Dos vocales seguidas que se separan en sílabas distintas.</p>
+    </div>
+  </div>
+
+  <div class="definicion naranja">
+    <p class="def-label">📖 Definición</p>
+    <p>El <strong>hiato</strong> ocurre cuando dos vocales seguidas se pronuncian en sílabas <strong>separadas</strong>, cada una en su propia sílaba. Es lo contrario al diptongo. Si en el diptongo las vocales se "abrazan", en el hiato se "separan".</p>
+  </div>
+
+  <div class="card naranja">
+    <h3>¿Cuándo se forma hiato?</h3>
+
+    <div class="regla-box">
+      <div class="regla-num bg-naranja">H1</div>
+      <div class="regla-content">
+        <h4>Dos vocales FUERTES juntas</h4>
+        <p>Cuando se encuentran dos vocales fuertes (a, e, o) seguidas, no pueden unirse en diptongo: cada una va en su sílaba.</p>
+        <div class="ejemplos-row">
+          <span class="ej ej-ora">ca·os (a/o = hiato)</span>
+          <span class="ej ej-ora">ma·es·tro (a/e)</span>
+          <span class="ej ej-ora">po·e·ma (o/e)</span>
+          <span class="ej ej-ora">co·e·ta (o/e)</span>
+          <span class="ej ej-ora">a·é·re·o (a/e/e/o)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="regla-box">
+      <div class="regla-num bg-naranja">H2</div>
+      <div class="regla-content">
+        <h4>Vocal débil TÓNICA + vocal fuerte</h4>
+        <p>Si la vocal débil (i, u) lleva tilde, "se fortalece" y rompe el diptongo, formando hiato. Este es el caso que más confunde.</p>
+        <div class="ejemplos-row">
+          <span class="ej ej-ora">ca·í·da (a/í = hiato)</span>
+          <span class="ej ej-ora">ba·úl (a/ú)</span>
+          <span class="ej ej-ora">ma·íz</span>
+          <span class="ej ej-ora">pa·ís</span>
+          <span class="ej ej-ora">rí·o (í/o)</span>
+          <span class="ej ej-ora">dí·a</span>
+          <span class="ej ej-ora">le·í·a</span>
+        </div>
+        <div class="tip amarillo" style="margin-top:0.8rem;padding:0.8rem 1rem">
+          <span class="tip-icon">⭐</span>
+          <p class="tip-text"><strong>Clave del hiato acentual:</strong> La tilde sobre la <em>i</em> o la <em>u</em> siempre indica hiato. La vocal débil con tilde SIEMPRE forma hiato con la vocal vecina, sin importar las reglas de acentuación generales.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIFERENCIA DIPTONGO VS HIATO -->
+  <div class="card naranja">
+    <h3>Diptongo vs. Hiato: la diferencia clave</h3>
+    <table class="tabla-vocales" style="margin-bottom:1rem">
+      <thead>
+        <tr>
+          <th style="background:#1565C0;color:white">DIPTONGO → una sílaba</th>
+          <th style="background:#E65100;color:white">HIATO → dos sílabas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>vocal débil <strong>sin tilde</strong> + fuerte</td>
+          <td>vocal débil <strong>con tilde</strong> + fuerte</td>
+        </tr>
+        <tr>
+          <td><strong>pie</strong> = 1 sílaba (ie juntas)</td>
+          <td><strong>rí·o</strong> = 2 sílabas (r<u>í</u> · o)</td>
+        </tr>
+        <tr>
+          <td><strong>cau·sa</strong> = 2 sílabas (cau / sa)</td>
+          <td><strong>ca·í·da</strong> = 3 sílabas (ca / í / da)</td>
+        </tr>
+        <tr>
+          <td><strong>tie·rra</strong> = 2 sílabas (tie / rra)</td>
+          <td><strong>le·í·a</strong> = 3 sílabas (le / í / a)</td>
+        </tr>
+        <tr>
+          <td><strong>via·je</strong> = 2 sílabas (via / je)</td>
+          <td><strong>Ma·rí·a</strong> = 3 sílabas (Ma / rí / a)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="tip rojo">
+      <span class="tip-icon">🚨</span>
+      <p class="tip-text"><strong>¡Ojo con estas palabras!</strong> <em>guion, truhan, fie, fue, dio, vio</em> — Son palabras monosílabas con diptongo y <strong>no llevan tilde</strong> según la RAE actual.</p>
+    </div>
+  </div>
+
+  <!-- TRIPTONGOS -->
+  <div class="card amarillo">
+    <h3>Dato extra: el Triptongo</h3>
+    <p>Es la unión de <strong>tres vocales</strong> en una sola sílaba: débil + fuerte + débil. Las tres se pronuncian juntas.</p>
+    <div class="ejemplos-row" style="margin-top:0.7rem">
+      <span class="ej ej-si">buey (uey = 1 sílaba)</span>
+      <span class="ej ej-si">miau (iau)</span>
+      <span class="ej ej-si">U·ru·guay (uay)</span>
+      <span class="ej ej-si">a·ve·ri·guáis (uáis)</span>
+    </div>
+  </div>
+
+  <div class="tip naranja">
+    <span class="tip-icon">🔑</span>
+    <p class="tip-text"><strong>Regla de oro:</strong> Si la <em>i</em> o la <em>u</em> llevan tilde → siempre es HIATO. Si no llevan tilde y están junto a otra vocal → generalmente DIPTONGO.</p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- SECCIÓN 4: PUNTUACIÓN -->
+<!-- ════════════════════════════════════════════════ -->
+<section class="seccion sec-morado" id="puntuacion">
+  <div class="seccion-header">
+    <div class="seccion-num">4</div>
+    <div>
+      <h2>Signos de Puntuación</h2>
+      <p style="color:var(--texto-suave);font-size:0.95rem">Las señales de tránsito del lenguaje escrito: sin ellos, todo se confunde.</p>
+    </div>
+  </div>
+
+  <div class="definicion morado">
+    <p class="def-label">📖 ¿Para qué sirven?</p>
+    <p>Los signos de puntuación organizan el texto escrito: indican pausas, el tono de voz, cuándo termina una idea y cuándo empieza otra. Un texto sin puntuación es como una carretera sin señales: todo se convierte en un accidente.</p>
+  </div>
+
+  <!-- EL PUNTO -->
+  <div class="punt-item">
+    <div class="punt-signo" style="color:var(--verde)">.</div>
+    <div class="punt-contenido">
+      <h4 style="color:var(--verde)">El Punto ( . )</h4>
+      <p>Indica una <strong>pausa larga</strong>. Marca el final de una oración o de un párrafo.</p>
+      <ul class="usos-lista">
+        <li><strong>Punto y seguido:</strong> termina una oración pero el texto continúa en el mismo párrafo.</li>
+        <li><strong>Punto y aparte:</strong> termina un párrafo completo. El siguiente empieza en renglón nuevo.</li>
+        <li><strong>Punto final:</strong> cierra todo el texto.</li>
+        <li>Después de abreviaturas: <em>Sr. Dr. Etc. Av.</em></li>
+        <li><strong>NUNCA</strong> se usa punto después de signos de interrogación o exclamación (✗ ¿Cómo estás?. ✓ ¿Cómo estás?)</li>
+      </ul>
+      <div class="compara" style="margin-top:0.8rem">
+        <div class="compara-bien">
+          <span class="compara-label">✅ CORRECTO</span>
+          Fui al mercado. Compré frutas, verduras y pan. Luego regresé a casa.
+        </div>
+        <div class="compara-mal">
+          <span class="compara-label">❌ INCORRECTO</span>
+          Fui al mercado Compré frutas verduras y pan Luego regresé a casa
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LA COMA -->
+  <div class="punt-item">
+    <div class="punt-signo" style="color:var(--azul)">,</div>
+    <div class="punt-contenido">
+      <h4 style="color:var(--azul)">La Coma ( , )</h4>
+      <p>Indica una <strong>pausa breve</strong> dentro de la oración. Es el signo más usado y el que más errores provoca.</p>
+      <ul class="usos-lista">
+        <li><strong>Enumeraciones:</strong> separa elementos de una lista. <em>Compré manzanas, peras, uvas y bananos.</em></li>
+        <li><strong>Vocativo:</strong> cuando llamamos a alguien por su nombre. <em>Juan, ven acá. / Ven acá, Juan.</em></li>
+        <li><strong>Incisos:</strong> aclaraciones que se insertan en la oración. <em>Mi hermano, el mayor, trabaja allá.</em></li>
+        <li><strong>Conectores:</strong> sin embargo, además, por lo tanto, es decir... <em>Estudié mucho; sin embargo, me fue mal.</em></li>
+        <li><strong>NUNCA</strong> se pone coma entre sujeto y verbo. ✗ <em>El niño, comió.</em></li>
+      </ul>
+      <div class="compara" style="margin-top:0.8rem">
+        <div class="compara-bien">
+          <span class="compara-label">✅ CORRECTO</span>
+          María, por favor, cierra la ventana. Traje pan, leche, huevos y azúcar.
+        </div>
+        <div class="compara-mal">
+          <span class="compara-label">❌ INCORRECTO</span>
+          María por favor cierra la ventana. Traje pan leche huevos y azúcar.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PUNTO Y COMA -->
+  <div class="punt-item">
+    <div class="punt-signo" style="color:var(--naranja)">;</div>
+    <div class="punt-contenido">
+      <h4 style="color:var(--naranja)">El Punto y Coma ( ; )</h4>
+      <p>Pausa <strong>mayor que la coma, menor que el punto</strong>. Separa oraciones que tienen relación entre sí.</p>
+      <ul class="usos-lista">
+        <li>Une dos oraciones relacionadas que podrían ir separadas por punto. <em>Estudié toda la noche; a pesar de eso, reprobé.</em></li>
+        <li>En listas largas con comas internas. <em>Vinieron Ana, la profesora; Pedro, el vecino; y Luis, mi primo.</em></li>
+        <li>Antes de conectores como: <em>sin embargo, por tanto, no obstante, en cambio.</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- DOS PUNTOS -->
+  <div class="punt-item">
+    <div class="punt-signo" style="color:#00695C">:</div>
+    <div class="punt-contenido">
+      <h4 style="color:#00695C">Los Dos Puntos ( : )</h4>
+      <p>Anuncian que viene algo importante: una explicación, una lista o una cita.</p>
+      <ul class="usos-lista">
+        <li><strong>Antes de una enumeración:</strong> <em>Necesitas: lápiz, cuaderno y regla.</em></li>
+        <li><strong>Antes de una explicación:</strong> <em>Solo quiero una cosa: que seas feliz.</em></li>
+        <li><strong>En el saludo de cartas:</strong> <em>Estimado señor:</em></li>
+        <li><strong>Para introducir una cita textual:</strong> El profesor dijo: "Estudien para mañana."</li>
+        <li>Después de los dos puntos se puede escribir con mayúscula o minúscula según el contexto.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PUNTOS SUSPENSIVOS -->
+  <div class="punt-item">
+    <div class="punt-signo" style="color:var(--naranja)">…</div>
+    <div class="punt-contenido">
+      <h4 style="color:var(--naranja)">Los Puntos Suspensivos ( … )</h4>
+      <p>Son <strong>siempre tres puntos</strong>, ni más ni menos. Indican que algo queda incompleto o en suspenso.</p>
+      <ul class="usos-lista">
+        <li><strong>Texto incompleto:</strong> <em>No sé si decirte que… en fin, da igual.</em></li>
+        <li><strong>Suspenso o duda:</strong> <em>Cuando abrí la puerta, vi algo horrible…</em></li>
+        <li><strong>Para indicar omisión en una cita:</strong> <em>"Vino, vio… y venció."</em></li>
+        <li>Equivalen a <em>etcétera</em> en listas. <em>Frutas: mango, papaya, maracuyá…</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- INTERROGACIÓN -->
+  <div class="punt-item">
+    <div class="punt-signo" style="color:var(--morado)">¿?</div>
+    <div class="punt-contenido">
+      <h4 style="color:var(--morado)">Signos de Interrogación ( ¿ ? )</h4>
+      <p>En español se usan <strong>al inicio (¿) y al final (?)</strong> de la pregunta. No se usa solo al final como en inglés.</p>
+      <ul class="usos-lista">
+        <li>Señalan que la oración es una pregunta directa: <em>¿Cómo te llamas?</em></li>
+        <li>Si la pregunta es parcial, el signo va donde comienza la pregunta: <em>Dime, ¿dónde fuiste?</em></li>
+        <li><strong>NUNCA</strong> se pone punto después del signo de cierre (?). ✗ <em>¿Cómo estás?.</em></li>
+        <li>Se puede usar entre paréntesis (?) para expresar duda: <em>El texto es del siglo XVI (?).</em></li>
+      </ul>
+      <div class="compara" style="margin-top:0.8rem">
+        <div class="compara-bien">
+          <span class="compara-label">✅ CORRECTO</span>
+          ¿Qué hora es? ¿A qué hora llegas? Dime, ¿cuándo vuelves?
+        </div>
+        <div class="compara-mal">
+          <span class="compara-label">❌ INCORRECTO</span>
+          Que hora es? ¿Que hora es?. ¿A qué hora llegas?.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXCLAMACIÓN -->
+  <div class="punt-item">
+    <div class="punt-signo" style="color:var(--rojo)">¡!</div>
+    <div class="punt-contenido">
+      <h4 style="color:var(--rojo)">Signos de Exclamación ( ¡ ! )</h4>
+      <p>Expresan emoción fuerte: sorpresa, alegría, dolor, enojo, orden. También van al <strong>inicio (¡) y al final (!)</strong>.</p>
+      <ul class="usos-lista">
+        <li>Expresar emoción: <em>¡Qué alegría verte! ¡Cuidado con el perro!</em></li>
+        <li>Interjecciones: <em>¡Ay! ¡Bravo! ¡Ojalá!</em></li>
+        <li>Se puede combinar con interrogación: <em>¡¿Qué hiciste?!</em></li>
+        <li>No abusar de ellos: un texto lleno de !! pierde fuerza y se ve poco profesional.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- COMILLAS Y GUIÓN -->
+  <div class="grid-2">
+    <div class="punt-item" style="margin-bottom:0">
+      <div class="punt-signo" style="color:#5C6BC0;font-size:2rem">« »</div>
+      <div class="punt-contenido">
+        <h4 style="color:#5C6BC0">Las Comillas ( « » " " ' ' )</h4>
+        <p style="font-size:0.92rem">Encierran citas textuales, títulos de obras cortas o palabras usadas en sentido especial.</p>
+        <ul class="usos-lista" style="font-size:0.88rem">
+          <li>Cita textual: El profe dijo: <em>"Todos van a pasar."</em></li>
+          <li>Palabra extranjera o técnica: usó el <em>"software"</em> de diseño.</li>
+          <li>Título de artículos o poemas: <em>"Veinte poemas de amor"</em></li>
+        </ul>
+      </div>
+    </div>
+    <div class="punt-item" style="margin-bottom:0">
+      <div class="punt-signo" style="color:#795548;font-size:2rem">—</div>
+      <div class="punt-contenido">
+        <h4 style="color:#795548">El Guión ( - ) y la Raya ( — )</h4>
+        <p style="font-size:0.92rem">Son distintos: el guión (-) es corto; la raya (—) es larga.</p>
+        <ul class="usos-lista" style="font-size:0.88rem">
+          <li>Guión: separar palabras compuestas (<em>físico-químico</em>) o dividir palabras al final del renglón.</li>
+          <li>Raya: introduce diálogos: <em>—¿Cómo te llamas?</em></li>
+          <li>Raya: enmarca incisos (como las comas): <em>Mi hermano —el mayor— vive allá.</em></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- PÁRRAFO DE EJEMPLO -->
+  <div class="card morado" style="margin-top:1.5rem">
+    <h3>Texto de ejemplo con signos marcados</h3>
+    <p style="margin-bottom:0.8rem; font-size:0.93rem; color:#555">Observa cómo cada signo cumple una función diferente:</p>
+    <div class="parrafo-ejemplo">
+      El lunes<mark class="marca-coma" style="background:transparent">,</mark> cuando llegué a la escuela<mark class="marca-coma" style="background:transparent">,</mark> 
+      encontré algo sorprendente<mark class="marca-dospu" style="background:transparent">:</mark> 
+      el tablero<mark class="marca-coma" style="background:transparent">,</mark> las sillas y el escritorio habían desaparecido<mark class="marca-punto" style="background:transparent">.</mark>
+      <br>
+      <mark class="marca-interro" style="background:transparent">¿</mark>Quién había entrado<mark class="marca-interro" style="background:transparent">?</mark> 
+      Nadie lo sabía<mark class="marca-puntos" style="background:transparent">…</mark> 
+      <mark class="marca-excla" style="background:transparent">¡</mark>Era un misterio increíble<mark class="marca-excla" style="background:transparent">!</mark>
+      <br>
+      El director dijo<mark class="marca-dospu" style="background:transparent">:</mark> 
+      <em>"Revisaremos las cámaras de inmediato."</em> 
+      Todos esperábamos la respuesta<mark class="marca-punto" style="background:transparent">.</mark>
+    </div>
+    <div class="ejemplos-row" style="flex-wrap:wrap;gap:0.5rem;margin-top:0.8rem">
+      <span class="ej" style="background:#E8F5E9;color:var(--verde);border:1px solid #A5D6A7"><mark class="marca-punto" style="background:transparent">.</mark> punto</span>
+      <span class="ej" style="background:#E3F2FD;color:var(--azul);border:1px solid #90CAF9"><mark class="marca-coma" style="background:transparent">,</mark> coma</span>
+      <span class="ej" style="background:#FFF3E0;color:var(--naranja);border:1px solid #FFCC80"><mark class="marca-puntos" style="background:transparent">…</mark> puntos suspensivos</span>
+      <span class="ej" style="background:#F3E5F5;color:var(--morado);border:1px solid #CE93D8"><mark class="marca-interro" style="background:transparent">¿?</mark> interrogación</span>
+      <span class="ej" style="background:#FFEBEE;color:var(--rojo);border:1px solid #EF9A9A"><mark class="marca-excla" style="background:transparent">¡!</mark> exclamación</span>
+      <span class="ej" style="background:#E0F2F1;color:#00695C;border:1px solid #80CBC4"><mark class="marca-dospu" style="background:transparent">:</mark> dos puntos</span>
+    </div>
+  </div>
+
+  <!-- ERRORES COMUNES -->
+  <div class="card rojo" style="margin-top:1.5rem">
+    <h3>❌ Errores más comunes de puntuación</h3>
+    <div class="compara">
+      <div class="compara-mal">
+        <span class="compara-label">❌ MAL</span>
+        Hola como estas?<br>
+        Como te fue en el examen.<br>
+        El niño, comió arroz.<br>
+        Se me olvidó comprar: leche.<br>
+        ¡Qué sorpresa!.
+      </div>
+      <div class="compara-bien">
+        <span class="compara-label">✅ BIEN</span>
+        ¡Hola! ¿Cómo estás?<br>
+        ¿Cómo te fue en el examen?<br>
+        El niño comió arroz.<br>
+        Se me olvidó comprar leche.<br>
+        ¡Qué sorpresa!
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESUMEN FINAL -->
+<section class="seccion">
+  <h2 style="font-family:'Fredoka One',sans-serif;font-size:1.8rem;text-align:center;margin-bottom:2rem;color:var(--texto)">🎯 Resumen de lo que aprendiste</h2>
+  <div class="resumen-grid">
+    <div class="resumen-card rc-azul">
+      <span class="emoji">📘</span>
+      <h4>Acentuación</h4>
+      <p>Aguda+N/S/vocal → tilde. Grave sin N/S/vocal → tilde. Esdrújula → siempre tilde. Tilde diacrítica cambia el significado.</p>
+    </div>
+    <div class="resumen-card rc-verde">
+      <span class="emoji">🔗</span>
+      <h4>Diptongo</h4>
+      <p>Débil sin tilde + fuerte (o débil+débil) = una sola sílaba. La tilde va sobre la vocal fuerte del diptongo.</p>
+    </div>
+    <div class="resumen-card rc-naranja">
+      <span class="emoji">✂️</span>
+      <h4>Hiato</h4>
+      <p>Fuerte + fuerte = sílabas separadas. Débil CON tilde + cualquier vocal = hiato siempre. Más sílabas que el diptongo.</p>
+    </div>
+    <div class="resumen-card rc-morado">
+      <span class="emoji">🔤</span>
+      <h4>Puntuación</h4>
+      <p>Punto = pausa larga. Coma = pausa breve. ¿? ¡! siempre al inicio y al final. Nunca punto después de ? o !</p>
+    </div>
+  </div>
+</section>
+
+</div><!-- /contenedor -->
+
+<footer>
+  <strong>I.E. San Antonio · Sede Palacio · Neiva, Huila</strong><br>
+  Lengua Castellana · Material pedagógico de uso educativo
+</footer>
+
+</body>
+</html>
